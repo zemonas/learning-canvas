@@ -33,13 +33,14 @@ canvas.addEventListener('mousemove', (e)=>{
 canvas.addEventListener('touchmove', (e)=>{
     e.preventDefault();
     var touch = e.touches[0]
-    mouse.x = touch.x;
-    mouse.y = touch.y;
+    console.log();
+    mouse.x = touch.pageX;
+    mouse.y = touch.pageY;
     for (let i = 0 ; i < 3 ; i++){
         particleArray.push(new Particle());
     }
    // drawCircle();
-})
+},false)
 
 function drawCircle(){
     ctx.lineWidth = 5;
